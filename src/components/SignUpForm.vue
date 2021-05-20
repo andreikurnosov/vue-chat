@@ -15,16 +15,19 @@
 
 <script>
 import { ref } from 'vue'
+import useSingUp from '../composables/useSignUp'
+
 export default {
   setup() {
+    const { error, signup } = useSingUp()
+
     const displayName = ref('')
     const email = ref('')
     const password = ref('')
 
-    function handleSubmit() {
-      console.log(displayName.value)
-      console.log(email.value)
-      console.log(password.value)
+    async function handleSubmit() {
+      await signup(email.value, password.value, displayName.value)
+      console.log('user signed up ')
     }
 
     return {
@@ -37,4 +40,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>
