@@ -12,5 +12,3 @@ export default {
   }
 }
 </script>
-
-<style l Navbarang="scss" scoped></style>
