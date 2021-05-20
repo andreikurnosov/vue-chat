@@ -31,7 +31,6 @@ export default {
 
     async function handleSubmit() {
       await signup(email.value, password.value, displayName.value)
-      console.log('user signed up ')
     }
 
     return {
