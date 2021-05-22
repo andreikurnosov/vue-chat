@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <navbar />
-    <new-chat-form />
     
     <chat-window />
     
+    <new-chat-form />
   </div>
 </template>
 
